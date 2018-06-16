@@ -43,7 +43,7 @@
     
     <title>
         
-            标签 | 
+            四、JNI数据类型 | 
         
         连嘉阳的技术博客
     </title>
@@ -54,7 +54,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="记录点滴是一种生活方式">
-    <meta name="keywords" content="">
+    <meta name="keywords" content=",JNI">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -215,7 +215,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="连嘉阳的技术博客">
-    <meta name="msapplication-starturl" content="http://tech.unicornlien.top/tags/">
+    <meta name="msapplication-starturl" content="http://tech.unicornlien.top/2016/07/16/JNI/四、JNI数据类型/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="连嘉阳的技术博客">
@@ -230,13 +230,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://tech.unicornlien.top/tags/">
+    <meta property="og:url" content="http://tech.unicornlien.top/2016/07/16/JNI/四、JNI数据类型/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="标签 | 连嘉阳的技术博客">
+    <meta property="og:title" content="四、JNI数据类型 | 连嘉阳的技术博客">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="记录点滴是一种生活方式">
-    
+    <meta property="og:article:tag" content="JNI"> 
 
+    
+        <meta property="article:published_time" content="Sat Jul 16 2016 13:21:28 GMT+0800">
+        <meta property="article:modified_time" content="Sat Jun 16 2018 16:22:43 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -244,13 +247,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://tech.unicornlien.top/tags/index.html" />
+        <link rel="canonical" href="http://tech.unicornlien.top/2016/07/16/JNI/四、JNI数据类型/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://tech.unicornlien.top/2016/07/16/JNI/四、JNI数据类型/index.html",
+    "headline": "四、JNI数据类型",
+    "datePublished": "Sat Jul 16 2016 13:21:28 GMT+0800",
+    "dateModified": "Sat Jun 16 2018 16:22:43 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "连嘉阳",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "记录点滴是一种生活方式"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "连嘉阳的技术博客",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",JNI",
+    "description": "记录点滴是一种生活方式",
+}
+</script>
 
 
     
@@ -286,60 +319,424 @@
 
                     <!-- Post TOC -->
 
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#1-基本数据类型："><span class="post-toc-number">1.</span> <span class="post-toc-text">1.基本数据类型：</span></a></li></ol>
+    </ul>
+    
+
+
+
 
 <!-- Layouts -->
 
-    <!-- Tags Cloud -->
-    <style>
-    #bottom{
-        position: relative;
-    }
+    <!-- Post Module -->
+    <div class="material-post_container">
 
-    @media screen and (max-width: 480px) {
-        .material-tagscloud{
-            margin: 6em 2em 0;
-        }
-    }
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
 
-    .material-tagscloud a{
-        text-decoration:none;
-        padding: 1px 9px;
-        margin: 9px 1px;
-        line-height: 40px;
-        white-space: nowrap;
-        transition: .6s;
-        opacity: .85;
-    }
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-    .material-tagscloud a:hover{
-        transition: .6s;
-        opacity: 1;
-        background: #FAFAFA;
-        box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
-    }
-</style>
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
 
-<div class=" material-tagscloud">
-    <div class="material-post mdl-grid">
-        <a href="/tags/JNI/" style="font-size: 16px; color: #757575">JNI</a>
+        
+    
+            <p class="article-headline-p">
+                四、JNI数据类型
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
     </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>连嘉阳</strong>
+        <span>7月 16, 2016</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAACyklEQVR42u3aWW7DMAwFQN//0u0BgjqPpFLE0vgrCGxZowBluVw/R14XNjY2NjY2NjY29leyr/h6fep1hXzNv569/360Z2xsbOyt2W/+9L9s9P6e/IDyQ5zsGRsbG/sc9n2YSbbVCzwJL3njm9WwsbGxsVtBKKfODxobGxsbuxpa8pBTDUvVp7CxsbGxywWaeBOTcNU7IGxsbOwz2Z9IHj79+V/729jY2NhfzC6PMBaP5n6Fakt4tHNsbGzsTdm9kZ3eppPv81bx/QrY2NjYZ7J7IWQyHDkZEkp+AGxsbOxz2JOBmzzwVA9uMk5UqKVhY2NjP5yd/KM/uWcyuJP/GEkzGBsbG3tX9toxml5jOEokWoUtbGxs7BPYeXmo13aNhmniVGdSDsPGxsbem72qBF89smTcp9eieNMewMbGxt6I3Wu49spGq8pM+YWNjY19GrvXEpgnMGsbxtjY2NjYk7ShB+slPMmgDzY2NvY57JzXC2O9FKU36Fnub2NjY2M/nD1p3E4CW/WYek1ibGxs7BPYV+uqFpt6gztJ+7kQ0rCxsbE3ZedhYNJknfPmRS5sbGzsXdl5USkv4lSLRL3glych2NjY2Huz58M3vfGaXukqaetiY2Njn8nuJSG98v18hTysYmNjY5/AXlX6rwbFHN8rXWFjY2Ofxs4Tg7z0P0laqmWsKBBiY2NjH8OuBpIqvldISj4v64pgY2NjP5adF9zLwaNY7p+MhJZTEWxsbOyHsyct2N64z3zIslnewsbGxt6U3QsPn2DkCUZyrFFRCRsbG3sjdhK0qiGtmTAUk428tYCNjY19AvsekGwuTw9WjW8WmtDY2NjY2PHwTZ425Pfkb/9zz9jY2NjY48btqpGdPBxiY2Njn8bOA0YvJZiEpeRdzQCGjY2NvQW7t/Q8EFZbvKOAio2Njb0p+5wLGxsbGxsbGxsb+2uuX86dJW9r0xuAAAAAAElFTkSuQmCC">
+    
+</ul>
+
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/JNI/">JNI</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=四、JNI数据类型&url=http://tech.unicornlien.top/2016/07/16/JNI/四、JNI数据类型/index.html&pic=http://tech.unicornlien.top/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+
+    <!-- Share Facebook -->
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=http://tech.unicornlien.top/2016/07/16/JNI/四、JNI数据类型/index.html&title=四、JNI数据类型" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 LinkedIn
+            </li>
+        </a>
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=连嘉阳的技术博客&title=四、JNI数据类型&summary=记录点滴是一种生活方式&pics=http://tech.unicornlien.top/img/favicon.png&url=http://tech.unicornlien.top/2016/07/16/JNI/四、JNI数据类型/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>Java和C使用JNI通信，所谓通信是指数据上的传递，当Java传递一个String类型给C，C要如何处理？JNI对此提供了一套中间的数据类型。</p>
+<ol>
+<li>基本数据类型</li>
+<li>引用数据类型</li>
+<li>数据类型继承关系</li>
+<li>类描述符</li>
+<li>域描述符</li>
+<li>方法描述符</li>
+<li>javap查看方法签名</li>
+</ol>
+<p>JNI数据类型也分为基本数据类型和引用数据类型</p>
+<p>数组都是引用类型，引用类型不能直接使用，要经过JNI函数转换才能使用</p>
+<h1 id="1-基本数据类型："><a href="#1-基本数据类型：" class="headerlink" title="1.基本数据类型："></a>1.基本数据类型：</h1><table>
+<thead>
+<tr>
+<th><strong>JNI</strong></th>
+<th><strong>Java</strong></th>
+<th><strong>C/C++</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>jlong</td>
+<td>long</td>
+<td>有符号64位整型（long）</td>
+</tr>
+<tr>
+<td>jint</td>
+<td>int</td>
+<td>有符号32位整型（int）</td>
+</tr>
+<tr>
+<td>jboolean</td>
+<td>boolean</td>
+<td>无符号8位整型(unsigned char)</td>
+</tr>
+<tr>
+<td>jfloat</td>
+<td>float</td>
+<td>32位浮点型（float）</td>
+</tr>
+<tr>
+<td>jdouble</td>
+<td>double</td>
+<td>64位浮点型（double）</td>
+</tr>
+<tr>
+<td>jbyte</td>
+<td>byte</td>
+<td>有符号8位整型（char）</td>
+</tr>
+<tr>
+<td>jshort</td>
+<td>short</td>
+<td>有符号16位整型（short）</td>
+</tr>
+<tr>
+<td>jchar</td>
+<td>char</td>
+<td>无符号16位整型（unsigned short）</td>
+</tr>
+</tbody>
+</table>
+<p>#2.引用数据类型：</p>
+<table>
+<thead>
+<tr>
+<th><strong>JNI</strong></th>
+<th><strong>Java</strong></th>
+<th><strong>C/C++</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>jobject</td>
+<td>Object</td>
+<td>任何Java对象或没有对应Java类型的对象</td>
+</tr>
+<tr>
+<td>jclass</td>
+<td>Class</td>
+<td>Class类对象</td>
+</tr>
+<tr>
+<td>jstring</td>
+<td>String</td>
+<td>字符串对象</td>
+</tr>
+<tr>
+<td>jobjectArray</td>
+<td>Object[]</td>
+<td>任何对象数组</td>
+</tr>
+<tr>
+<td>jbooleanArray</td>
+<td>boolean[]</td>
+<td>布尔型数组</td>
+</tr>
+<tr>
+<td>jbyteArray</td>
+<td>byte[]</td>
+<td>比特型数组</td>
+</tr>
+<tr>
+<td>jcharArray</td>
+<td>char[]</td>
+<td>字符型数组</td>
+</tr>
+<tr>
+<td>jshortArray</td>
+<td>short[]</td>
+<td>短整型数组</td>
+</tr>
+<tr>
+<td>jintArray</td>
+<td>int[]</td>
+<td>整型数组</td>
+</tr>
+<tr>
+<td>jlongArray</td>
+<td>long[]</td>
+<td>长整型数组</td>
+</tr>
+<tr>
+<td>jfloatArray</td>
+<td>float[]</td>
+<td>浮点型数组</td>
+</tr>
+<tr>
+<td>jdoubleArray</td>
+<td>double[]</td>
+<td>双浮点型数组</td>
+</tr>
+<tr>
+<td>void</td>
+<td>void</td>
+<td>n/a</td>
+</tr>
+</tbody>
+</table>
+<p>#3.数据类型继承关系</p>
+<p><img src="./四、JNI数据类型/images/1.png" alt="img"></p>
+<p>#4.类描述符</p>
+<p>如果在一个本地方法中，我们要返回一个自定义的User对象怎么办？C中怎么找到Java中的User类？</p>
+<p>JNI提供的函数中有个FindClass()就是用来查找Java类的，其参数必须放入一个类描述符字符串</p>
+<p>例如User类完整类名为qrsoft.org.User，那么类描述符就是将完整类名的.全部换成/  =&gt;   “qrsoft/org/User”</p>
+<p>那么找到User类的代码就是如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jclass userClass = FindClass(<span class="string">"qrsoft/org/User"</span>);</span><br></pre></td></tr></table></figure>
+<p>#5.域描述符</p>
+<p>事实证明，FindClass使用域描述也是可行的，即：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">jclass userClass = FindClass(<span class="string">"qrsoft/org/User"</span>); </span><br><span class="line"><span class="comment">//	等同下面这句代码</span></span><br><span class="line">jclass userClass = FindClass(<span class="string">"Lqrsoft/org/User;"</span>);</span><br></pre></td></tr></table></figure>
+<p>什么是域描述符？</p>
+<p>域描述符是JNI中对Java数据类型的一种表示方法，虽然有类描述符，但是类描述符里并没有说明基本类型如何表示</p>
+<p>在域描述符中已经定义好了基本类型的表示：</p>
+<p><img src="./四、JNI数据类型/images/2.png" alt="img"></p>
+<p>域描述符也定义了数组类型的表示方法：</p>
+<p>数组类型的描述符为： [ + 其元素类型的域描述符</p>
+<p>如：int[] 描述符为 [I</p>
+<p>float[] 描述符为 [F</p>
+<p>String[] 描述符为 [Ljava/lang/String;</p>
+<p>n维数组就有几个[ + 其元素类型的域描述符</p>
+<p>如：int[][] 描述符为 [[I</p>
+<p>float[][] 描述符为 [[F</p>
+<p>如果要表示其他类，如同上面String类型一样，引用数据类型为 L + 该类类描述符 + ;</p>
+<p>如 Lqrsoft/org/User;</p>
+<p>Ljava/lang/String;</p>
+<p>#6.方法描述符</p>
+<p>方法描述符定义了方法的返回值和参数的表示形式</p>
+<p>将参数类型的域描述符按声明顺序放入一对括号中(如果没有参数则不需要括号)，括号后跟返回值类型的域描述符即形成方法描述符</p>
+<p>如：</p>
+<p>String test();        方法描述符 Ljava/lang/String;</p>
+<p>int f(int i, Object object);    方法描述符 (ILjava/lang/Object;)I</p>
+<p>void set(byte[] bytes);        方法描述符 ([B)V</p>
+<p>注意，如果返回值为void，那么方法描述符中使用V表示</p>
+<p>打开javah生成的头文件，你会发现javah头文件注释中已经生成了本地方法的方法描述符-&gt;Signature，所以方法描述符也可以叫做 签名</p>
+<p><img src="./四、JNI数据类型/images/3.png" alt="img"></p>
+<p>#7.javap查看方法签名</p>
+<p>javap是jdk自带的一个反编译工具，也可以查看java编译器生成的字节码，在此我们只利用他查看Java方法签名</p>
+<p>他的用法如同javah，但命令不同</p>
+<p>执行命令javap -s qrsoft.org.Test</p>
+<p>你可以查看到该类所有方法签名</p>
+<p><img src="./四、JNI数据类型/images/4.png" alt="img"></p>
+<p>javap也可以配置在eclipse中快捷使用，配置如javah一样，但配置不同</p>
+<p>javah配置如下：</p>
+<p><img src="./四、JNI数据类型/images/5.png" alt="img"></p>
+
+        
+                <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
+                    <p><strong>
+                         
+                            本文出自 连嘉阳的技术博客
+                        </strong>
+                        <br>
+                        <strong>本文链接：</strong><a href="http://tech.unicornlien.top/2016/07/16/JNI/四、JNI数据类型/">http://tech.unicornlien.top/2016/07/16/JNI/四、JNI数据类型/</a>
+                    </p>
+                </blockquote>
+        
+    
+
+    
 </div>
 
 
-<script type="text/ls-javascript" id="page-tagcloud-script">
-    var adjustFooter = function() {
-        if( ($('#bottom').offset().top + $('#bottom').outerHeight() ) < $(window).height() ) {
-            var footerBottom = $(window).height() - $('#bottom').outerHeight() - $('#bottom').offset().top;
-            $('#bottom').css('bottom', '-' + footerBottom + 'px');
-        }
-    };
+                
 
-    $(document).ready(function() {
-        adjustFooter();
-    });
-</script>
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
 
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2016/07/16/JNI/三、JNI基本使用/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
 
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2016/07/15/JNI/二、JNI开发环境搭建与调试/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
 
 
 
@@ -523,6 +920,14 @@ It will not impact the appearance and can give developers a lot of support :)
 </aside>
 
                     
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
                     
 

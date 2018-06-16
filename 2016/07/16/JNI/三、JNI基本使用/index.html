@@ -43,7 +43,7 @@
     
     <title>
         
-            标签 | 
+            三、JNI基本使用 | 
         
         连嘉阳的技术博客
     </title>
@@ -54,7 +54,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="记录点滴是一种生活方式">
-    <meta name="keywords" content="">
+    <meta name="keywords" content=",JNI">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -215,7 +215,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="连嘉阳的技术博客">
-    <meta name="msapplication-starturl" content="http://tech.unicornlien.top/tags/">
+    <meta name="msapplication-starturl" content="http://tech.unicornlien.top/2016/07/16/JNI/三、JNI基本使用/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="连嘉阳的技术博客">
@@ -230,13 +230,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://tech.unicornlien.top/tags/">
+    <meta property="og:url" content="http://tech.unicornlien.top/2016/07/16/JNI/三、JNI基本使用/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="标签 | 连嘉阳的技术博客">
+    <meta property="og:title" content="三、JNI基本使用 | 连嘉阳的技术博客">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="记录点滴是一种生活方式">
-    
+    <meta property="og:article:tag" content="JNI"> 
 
+    
+        <meta property="article:published_time" content="Sat Jul 16 2016 13:21:28 GMT+0800">
+        <meta property="article:modified_time" content="Sat Jun 16 2018 16:17:04 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -244,13 +247,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://tech.unicornlien.top/tags/index.html" />
+        <link rel="canonical" href="http://tech.unicornlien.top/2016/07/16/JNI/三、JNI基本使用/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://tech.unicornlien.top/2016/07/16/JNI/三、JNI基本使用/index.html",
+    "headline": "三、JNI基本使用",
+    "datePublished": "Sat Jul 16 2016 13:21:28 GMT+0800",
+    "dateModified": "Sat Jun 16 2018 16:17:04 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "连嘉阳",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "记录点滴是一种生活方式"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "连嘉阳的技术博客",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",JNI",
+    "description": "记录点滴是一种生活方式",
+}
+</script>
 
 
     
@@ -286,60 +319,296 @@
 
                     <!-- Post TOC -->
 
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#1、定义Java本地方法"><span class="post-toc-number">1.</span> <span class="post-toc-text">1、定义Java本地方法</span></a></li></ol>
+    </ul>
+    
+
+
+
 
 <!-- Layouts -->
 
-    <!-- Tags Cloud -->
-    <style>
-    #bottom{
-        position: relative;
-    }
+    <!-- Post Module -->
+    <div class="material-post_container">
 
-    @media screen and (max-width: 480px) {
-        .material-tagscloud{
-            margin: 6em 2em 0;
-        }
-    }
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
 
-    .material-tagscloud a{
-        text-decoration:none;
-        padding: 1px 9px;
-        margin: 9px 1px;
-        line-height: 40px;
-        white-space: nowrap;
-        transition: .6s;
-        opacity: .85;
-    }
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-    .material-tagscloud a:hover{
-        transition: .6s;
-        opacity: 1;
-        background: #FAFAFA;
-        box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
-    }
-</style>
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
 
-<div class=" material-tagscloud">
-    <div class="material-post mdl-grid">
-        <a href="/tags/JNI/" style="font-size: 16px; color: #757575">JNI</a>
+        
+    
+            <p class="article-headline-p">
+                三、JNI基本使用
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
     </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>连嘉阳</strong>
+        <span>7月 16, 2016</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAACw0lEQVR42u3aQXLDMAgF0Nz/0u22m7gfcDOueF5lPIrC0yIMoNfXyueFjY2NjY2NjY2N/Uj2K37efevnm3znd/tcvx/FjI2NjX00+5e//piXHM27ldUDzWPGxsbG3sO+TjM5srcmWd+LGRsbGxs7STB5WNcrqykNGxsbG7u3RVIkJN9K1ueHgo2NjY1daNDcVELMP3+ol4aNjY39eHY+NH3O54/Ot7GxsbEfzC5fYYzT1fUOvTJmFDk2Njb2oezelZ1JAdMbEld3wMbGxt7Mnl+pyRPhfLScX83ExsbGPptdbdBcB5Qks3mqy99gY2Njn83ulSXzxHbvSCAaP2NjY2Mfyu795GRNL9VVkxY2NjY2dl5mVFtU+Zq8eRQdKDY2NvYydjWp5MVGXthMhsrY2NjYm9lJiL3C4642UzUSbGxs7A3s3tb3FjB5uZLvg42Njb2NXb2gMwkoumRz00UfbGxs7A3sPKVVg8hHtnlqrA4MsLGxsc9mV5/edZn5MeVDYmxsbOxt7LyplI9vJ+knL1ryIgobGxv7bHaeBpIg8uOo8qrXfbCxsbG3satNn+q4N1+TJ6rqoWNjY2Ofze413K/XJK2lXusqHxJgY2Njb2BXi43kZ6rhTgYA+eFiY2Njn82ulh+9Czo5o5e6sLGxsTez5wVJ3irqtbEmB4qNjY29k50Pfa9/vtdO+pNUio2Njb2APX+TH0SyQ16QJEeMjY2NfSp7nmDyJNQrPPLyZnT5EhsbG/vfsqtXG3st/oSRt5Dy4TQ2Njb2HnaetPJWVLNgKH43b2lhY2Njb2An7fikVTQpV/JmU/VYsbGxsbHzciIvG5LBQJK0ogEwNjY2NvZ4cJsXIeXW/6SphI2NjX0Qu9pUmjeA8tFytezBxsbG3sbOGZMmUdKcqg6ACwkVGxsb+1D2ngcbGxsbGxsbGxv7Mc83DJyV8MwMIuMAAAAASUVORK5CYII=">
+    
+</ul>
+
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/JNI/">JNI</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=三、JNI基本使用&url=http://tech.unicornlien.top/2016/07/16/JNI/三、JNI基本使用/index.html&pic=http://tech.unicornlien.top/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+
+    <!-- Share Facebook -->
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=http://tech.unicornlien.top/2016/07/16/JNI/三、JNI基本使用/index.html&title=三、JNI基本使用" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 LinkedIn
+            </li>
+        </a>
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=连嘉阳的技术博客&title=三、JNI基本使用&summary=记录点滴是一种生活方式&pics=http://tech.unicornlien.top/img/favicon.png&url=http://tech.unicornlien.top/2016/07/16/JNI/三、JNI基本使用/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="1、定义Java本地方法"><a href="#1、定义Java本地方法" class="headerlink" title="1、定义Java本地方法"></a>1、定义Java本地方法</h1><p>​        在类中声明一个方法，不需要实现，将方法加上native关键字表示此方法为本地方法</p>
+<p><img src="./三、JNI基本使用/images/1.png" alt="img"></p>
+<p>#2、根据类生成头文件</p>
+<p>​        可以使用两种方式，根据个人情况选择（最后都是调用javah）：</p>
+<p>​           </p>
+<ol>
+<li>使用javah命令生成头文件</li>
+</ol>
+<p>​                javah不能对.java文件生成头文件，而是要对.class文件生成头文件</p>
+<p>​        例如当前类为qrsoft.sk818sdk.Test,磁盘位置为d:\qrsoft\sk818sdk\Test.class</p>
+<p>​        cmd进入d盘，输入命令 javah qrsoft.sk818sdk.Test 将在d盘下生成头文件qrsoft_sk818sdk_Test.h</p>
+<p>​        到此使用javah命令成功！注意操作细节，与本描述一致不会出错。</p>
+<ol start="2">
+<li>在eclipse中配置javah命令快速生成头文件</li>
+</ol>
+<p>​                使用javah命令生成头文件过于繁琐，如果使用eclipse开发java，可以在eclipse中配置javah命令，一键生成头文件。</p>
+<p>​        配置如下，eclipse打开菜单 run-&gt;External Tools-&gt;External Tool Configurations…</p>
+<p><img src="./三、JNI基本使用/images/2.png" alt="img"></p>
+<p>打开了配置窗口后，在左边Program右键菜单点击菜单项new，配置如下：</p>
+<p><img src="./三、JNI基本使用/images/3.png" alt="img"></p>
+<p>Location为javah的位置，javah位置在jdk的bin里</p>
+<p>Working Dicectory为照填${project_loc}/src</p>
+<p>Arguments由于我是maven工程所以填</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-classpath $&#123;project_loc&#125;/target/classes -d  $&#123;project_loc&#125;/jni -jni $&#123;java_type_name&#125;</span><br></pre></td></tr></table></figure>
+<p>如果是普通java工程，要查看这个工程编译后是生成class在哪里（maven是在/target/classes）,然后这个目录替换掉/target/classes</p>
+<p>接下来，如何使用？</p>
+<p>在Project Explorer中选中你要生成头文件的类，点击如图的javah，即可生成头文件在此工程的jni文件夹，如果没有请右键刷新此工程</p>
+<p><img src="./三、JNI基本使用/images/4.png" alt="img"><img src="./三、JNI基本使用/images/5.png" alt="img"></p>
+<p>#3、根据头文件编写C代码实现</p>
+<p>​    </p>
+<ol>
+<li>头文件解释</li>
+</ol>
+<p>​        生成的头文件里包含了函数声明，根据这些函数声明编写对应的C代码实现就能实现Java调用C的效果。</p>
+<p>你可以把这个头文件导入你的VS C语言工程，开始进行JNI的开发。</p>
+<p><img src="./三、JNI基本使用/images/6.png" alt="img"></p>
+<p>如上图，头文件全部都是函数声明，但是与普通的C语言函数声明不太一样，因为它是遵守JNI的规范来声明的。</p>
+<p>例如函数声明：</p>
+<p>​    JNIEXPORT jboolean JNICALL Java_qrsoft_sk818sdk_SK818SDKAPI_destroy(JNIEnv *, jobject);</p>
+<p>解释： </p>
+<p>JNIEXPORT：表示这是一个JNI DLL导出函数</p>
+<p>jboolean：表示返回值的数据类型（看起来不像是java的数据类型，也不是c的数据类型，这是因为jni有自己一套数据类型）</p>
+<p>JNICALL：JNI调用约定</p>
+<p>方法名Java_qrsoft_sk818sdk_SK818SDKAPI_destroy：方法名是有规律的，前缀固定是Java，后面跟的qrsoft_sk818sdk表示类的包名，SK818SDKAPI是类名，destroy是java中真正的方法名</p>
+<p>(JNIEnv <em>, jobject)：每一个JNI函数都会有这个参数，即使java中是无参数的。如果java中有一个参数，那么就会变成(JNIEnv </em>, jobject,int)，JNIEnv *和jobject固定是前两个参数</p>
+<ol start="2">
+<li>实现头文件声明的函数</li>
+</ol>
+<ul>
+<li>创建.c或.cpp文件</li>
+<li>include上面那个头文件</li>
+<li>把头文件的函数声明拷贝到.c文件</li>
+<li>为形参都补上参数名称</li>
+<li>include jni.h头文件(在jdk下的include文件夹)</li>
+<li>着手开发！</li>
+</ul>
+<p><img src="./三、JNI基本使用/images/7.png" alt="img"></p>
+
+        
+                <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
+                    <p><strong>
+                         
+                            本文出自 连嘉阳的技术博客
+                        </strong>
+                        <br>
+                        <strong>本文链接：</strong><a href="http://tech.unicornlien.top/2016/07/16/JNI/三、JNI基本使用/">http://tech.unicornlien.top/2016/07/16/JNI/三、JNI基本使用/</a>
+                    </p>
+                </blockquote>
+        
+    
+
+    
 </div>
 
 
-<script type="text/ls-javascript" id="page-tagcloud-script">
-    var adjustFooter = function() {
-        if( ($('#bottom').offset().top + $('#bottom').outerHeight() ) < $(window).height() ) {
-            var footerBottom = $(window).height() - $('#bottom').outerHeight() - $('#bottom').offset().top;
-            $('#bottom').css('bottom', '-' + footerBottom + 'px');
-        }
-    };
+                
 
-    $(document).ready(function() {
-        adjustFooter();
-    });
-</script>
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
 
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2016/07/16/JNI/五、JNI提供的函数介绍（一）：类和对象操作/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
 
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2016/07/16/JNI/四、JNI数据类型/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
 
 
 
@@ -523,6 +792,14 @@ It will not impact the appearance and can give developers a lot of support :)
 </aside>
 
                     
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
                     
 

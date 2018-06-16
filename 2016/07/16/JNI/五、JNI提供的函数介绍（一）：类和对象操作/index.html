@@ -43,7 +43,7 @@
     
     <title>
         
-            标签 | 
+            五、JNI提供的函数介绍（一）：类和对象操作 | 
         
         连嘉阳的技术博客
     </title>
@@ -54,7 +54,7 @@
 
     <meta name="format-detection" content="telephone=no"/>
     <meta name="description" itemprop="description" content="记录点滴是一种生活方式">
-    <meta name="keywords" content="">
+    <meta name="keywords" content=",JNI">
     <meta name="theme-color" content="#0097A7">
 
     <!-- Disable Fucking Bloody Baidu Tranformation -->
@@ -215,7 +215,7 @@
     <!-- WebAPP Icons -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="连嘉阳的技术博客">
-    <meta name="msapplication-starturl" content="http://tech.unicornlien.top/tags/">
+    <meta name="msapplication-starturl" content="http://tech.unicornlien.top/2016/07/16/JNI/五、JNI提供的函数介绍（一）：类和对象操作/">
     <meta name="msapplication-navbutton-color" content="#0097A7">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-title" content="连嘉阳的技术博客">
@@ -230,13 +230,16 @@
     
 
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://tech.unicornlien.top/tags/">
+    <meta property="og:url" content="http://tech.unicornlien.top/2016/07/16/JNI/五、JNI提供的函数介绍（一）：类和对象操作/">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="标签 | 连嘉阳的技术博客">
+    <meta property="og:title" content="五、JNI提供的函数介绍（一）：类和对象操作 | 连嘉阳的技术博客">
     <meta property="og:image" content="/img/favicon.png">
     <meta property="og:description" content="记录点滴是一种生活方式">
-    
+    <meta property="og:article:tag" content="JNI"> 
 
+    
+        <meta property="article:published_time" content="Sat Jul 16 2016 15:22:21 GMT+0800">
+        <meta property="article:modified_time" content="Sat Jun 16 2018 16:31:32 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -244,13 +247,43 @@
 
     <!-- Add canonical link for SEO -->
     
-        <link rel="canonical" href="http://tech.unicornlien.top/tags/index.html" />
+        <link rel="canonical" href="http://tech.unicornlien.top/2016/07/16/JNI/五、JNI提供的函数介绍（一）：类和对象操作/index.html" />
     
 
     <!-- Structured-data for SEO -->
     
         
 
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": "http://tech.unicornlien.top/2016/07/16/JNI/五、JNI提供的函数介绍（一）：类和对象操作/index.html",
+    "headline": "五、JNI提供的函数介绍（一）：类和对象操作",
+    "datePublished": "Sat Jul 16 2016 15:22:21 GMT+0800",
+    "dateModified": "Sat Jun 16 2018 16:31:32 GMT+0800",
+    "author": {
+        "@type": "Person",
+        "name": "连嘉阳",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/avatar.png"
+        },
+        "description": "记录点滴是一种生活方式"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "连嘉阳的技术博客",
+        "logo": {
+            "@type":"ImageObject",
+            "url": "/img/favicon.png"
+        }
+    },
+    "keywords": ",JNI",
+    "description": "记录点滴是一种生活方式",
+}
+</script>
 
 
     
@@ -286,60 +319,277 @@
 
                     <!-- Post TOC -->
 
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+
+    <!-- Left aligned menu below button -->
+    
+    
+
+
+
 
 <!-- Layouts -->
 
-    <!-- Tags Cloud -->
-    <style>
-    #bottom{
-        position: relative;
-    }
+    <!-- Post Module -->
+    <div class="material-post_container">
 
-    @media screen and (max-width: 480px) {
-        .material-tagscloud{
-            margin: 6em 2em 0;
-        }
-    }
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
 
-    .material-tagscloud a{
-        text-decoration:none;
-        padding: 1px 9px;
-        margin: 9px 1px;
-        line-height: 40px;
-        white-space: nowrap;
-        transition: .6s;
-        opacity: .85;
-    }
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
 
-    .material-tagscloud a:hover{
-        transition: .6s;
-        opacity: 1;
-        background: #FAFAFA;
-        box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
-    }
-</style>
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
 
-<div class=" material-tagscloud">
-    <div class="material-post mdl-grid">
-        <a href="/tags/JNI/" style="font-size: 16px; color: #757575">JNI</a>
+        
+    
+            <p class="article-headline-p">
+                五、JNI提供的函数介绍（一）：类和对象操作
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
     </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>连嘉阳</strong>
+        <span>7月 16, 2016</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+        <button id="article-functions-qrcode-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">devices other</i>
+    <span class="visuallyhidden">devices other</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-qrcode-button">
+    <li class="mdl-menu__item">在其它设备中阅读本文章</li>
+    
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASYAAAEmCAAAAADqr2IGAAAEIUlEQVR42u3aW5LaQBAEQO5/afsA64WqbskBQ+prA7CkyXFETz8ef1zB9UCACRMmTJgwuTBhwoTp7Zke8ZX8q5/ftp/89pT8k593G64REyZMmDAdxPQiNAYv0fLlC04QE+56jZgwYcKE6Tim5MHJa+Whut2Gdgtna8SECRMmTJie/z4JvUnymYfwfCMxYcKECROm9jF5qtkWXtuUePb+mDBhwoTpe5jy0NsWWO+jnBVwb6+FY8KECROmN2Nqw/Mn/v1f55swYcKECdPbMLVX21zM25xXlYBnJeN/3AcTJkyYMB3BlAfOWUMxH1SdpbLtxuTPwoQJEyZMJzHl4zjtt/s7X1XSvaxCgAkTJkyYPoqpDeezV89bm8nfbZgfjhlhwoQJE6YjmJK0tn1Ynpq2bdQ6qJdjRpgwYcKE6TymfAFJwnzfgSA/viSfR/8tMGHChAnTcUzPb5o3OOvGYQmXHzLagwgmTJgwYTqP6XkozVueM5SWflYaTo4FmDBhwoTpe5jue7nkPpvf5GXlaKWYMGHChOkgpk1Ztr32ZdzZWyXlYEyYMGHCdCpTPdRSDpIm5dfZ4M4+Ff91jZgwYcKE6QimvJG5X9is6ViUZcvNe/EbTJgwYcJ0BFNLs09o8/Jx3ljdbNuvb4sJEyZMmI5gmpVW20W2d75vCDUvDWPChAkTpvOY2lLsvpg7+7bdmCEfJkyYMGE6iGmWXu6T23zxySGmLVi/uDMmTJgwYfoapjYkb4ZpZknyVeNBmDBhwoTpVKY2RUzGcWatx81Az4y1OBBgwoQJE6aPZcoDbZsq54M4bQJcLDh+Q0yYMGHC9G1MxU0XhdrZ8tpkOCfDhAkTJkwnMeUDNElZtg3Y+QDQ/piSp9CYMGHChOkkpk0zctaeTCjbZmTe2rysyIsJEyZMmD6EaZbuzlqP+ajQZnvaY0RxbsKECRMmTB/LlIfn9jeb120pN6vAhAkTJkzfwPQ8hLdpbXuMSKCvTYBX7UxMmDBhwvRRTJvBl1nJOAnedQi/tqCMCRMmTJiOYEpahu3hYLYNG6z9BkeDO5gwYcKE6QimvNg6C/yb3+y3M78DJkyYMGE6iSl/ufwV26JqsYB1yzNCxIQJEyZMRzDtC6wb3GR78rS2fdYFXV9MmDBhwvT2TLN0cTUQ0xZby9S3TZhXFQJMmDBhwvT2TLMgnS97VkTOjyyzwaMkCceECRMmTCcxzZY0OyjMjgv7AF8n6pgwYcKE6TimPKDOEuBHebXF4quOOJgwYcKECVPedMxx2wNB3s4cjgdhwoQJE6avZ8qXfS3EVcXoF0kyJkyYMGE6jikp8ubp5WbcZz+Ik4/43FILx4QJEyZMb8Z03xBMG/g3rc02FX/xdEyYMGHCdASTKzoQuDBhwoQJEyZMLkyYML3L9RcTWgs6W8ft6AAAAABJRU5ErkJggg==">
+    
+</ul>
+
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/JNI/">JNI</a>
+    </ul>
+    
+
+    <!-- Share -->
+    
+        <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=五、JNI提供的函数介绍（一）：类和对象操作&url=http://tech.unicornlien.top/2016/07/16/JNI/五、JNI提供的函数介绍（一）：类和对象操作/index.html&pic=http://tech.unicornlien.top/img/favicon.png&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+
+    <!-- Share Facebook -->
+    
+
+    <!-- Share Google+ -->
+    
+
+    <!-- Share LinkedIn -->
+    
+        <a class="post_share-link" href="https://www.linkedin.com/shareArticle?mini=true&url=http://tech.unicornlien.top/2016/07/16/JNI/五、JNI提供的函数介绍（一）：类和对象操作/index.html&title=五、JNI提供的函数介绍（一）：类和对象操作" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 LinkedIn
+            </li>
+        </a>
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=连嘉阳的技术博客&title=五、JNI提供的函数介绍（一）：类和对象操作&summary=记录点滴是一种生活方式&pics=http://tech.unicornlien.top/img/favicon.png&url=http://tech.unicornlien.top/2016/07/16/JNI/五、JNI提供的函数介绍（一）：类和对象操作/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+    
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <p>如果你要开始JNI编程，你还需要了解JNI提供了哪些函数供你调用。</p>
+<p>这些函数都定义在了jni.h文件，包括上一篇文章介绍的数据类型，也都在这个头文件中。</p>
+<p>#1. 类和对象操作</p>
+<p>假设你要在JNI层使用C代码创建一个Java对象，并对其属性赋值，并返回这个对象到Java层，需要哪些操作？</p>
+<ol>
+<li>找到这个类</li>
+<li>实例化这个类</li>
+<li>找到这个对象的属性并对其赋值或者找到并调用可以对其属性赋值的方法</li>
+<li>return 这个对象</li>
+</ol>
+<p>对应以上四个步骤，JNI都提供了相应的函数：</p>
+<ol>
+<li>查找类 -&gt;FindClass函数 ，或者从一个现成的jobject从获取jclass -&gt; GetObjectClass函数，或者定义类DefineClass函数</li>
+<li>实例化这个类 -&gt; AllocObject函数或NewObject函数（附有带V版和带A版）,得到jobject</li>
+<li>找到这个对象的属性-&gt;GetFieldID函数（静态属性使用GetStaticFieldID函数）得到jfiledID，</li>
+</ol>
+<p>​        或者找到可调用的方法-&gt;GetMethodID函数（静态方法使用GetStaticMethodID函数）得到jmethodID</p>
+<p>​        对属性赋值-&gt;Set<type>Field函数，调用方法Call<type>Method函数</type></type></p>
+<ol start="4">
+<li>return jobject</li>
+</ol>
+<p>其他类和对象的操作函数：</p>
+<ol>
+<li>IsAssignableFrom函数：是用来判断一个类Class1和另一个类Class2是否相同或是另一个类的子类或接口</li>
+<li>IsSameObject函数：从函数名称上就可以看出是判断两个对象是否是同一个对象</li>
+<li>IsInstanceOf函数：判断一个对象是否是一个类的实例</li>
+<li>GetSuperclass函数：获取一个jclass的父jclass</li>
+</ol>
+<p>说明：</p>
+<p>​    1.Set<type>Field函数中<type>是根据属性数据类型变化的，例如数据类型为int，那么函数就是SetIntField函数</type></type></p>
+<p>​    具体如下图：</p>
+<p> <img src="./五、JNI类和对象操作/images/1.png" alt="img"><img src="./五、JNI类和对象操作/images/2.png" alt="img"></p>
+<p>​        八种基本数据类型都有对应的方法，其他引用类型统一使用SetObjectFiled函数，看上面第二图，有set当然也有get啦</p>
+<p>​    如果是静态属性的话，jni也是提供好了：</p>
+<p><img src="./五、JNI类和对象操作/images/3.png" alt="img"></p>
+<p>​    2.Call<type>Method函数中<type>是根据返回值变化的，例如返回值为int，则函数为CallIntMethod</type></type></p>
+<p>​    具体如下图：</p>
+<p><img src="./五、JNI类和对象操作/images/4.png" alt="img"><img src="./五、JNI类和对象操作/images/5.png" alt="img"></p>
+<p>​    如上两图，每个方法都有附属两个版本——带V版和带A版，这个不是重点，先忽略他们。</p>
+<p>​    可以发现<type>的取值就是八种基本数据类型、Object和void</type></p>
+<p>​    而V版和A版与什么都不带的版本区别仅仅在于最后一个方法参数（Java参数列表）的数据类型不同</p>
+<p>​    JNI也定义了静态方法的调用函数：</p>
+<p><img src="./五、JNI类和对象操作/images/6.png" alt="img"><img src="./五、JNI类和对象操作/images/7.png" alt="img"></p>
+<p>​    形式与非静态方法相似</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CallNonvirtalShortMethod(jobject obj, jclazz clazz, jmethodID methodID, ...);</span><br></pre></td></tr></table></figure>
+<p>在实际开发中（时刻App服务端JNI），将结构体一 一赋值到到Java对象返回到Java层出现了一些莫名其妙的问题，后来改成将结构体序列化为json返回到Java层，</p>
+<p>这个问题今晚（2015/12/18）刚好已经解决，是因为Java类属性为Integer类型，jni不能直接返回jint类型，而是需要new 一个Integer的jobject返回到Java层，避免麻烦，我把类属性都换成了int类型，不再出现莫名其妙崩溃的问题。但是结构体一一赋值给java对象属性编写太麻烦，还经常出问题，传递复杂数据类型，我更倾向于使用传递Json的形式。</p>
+
+        
+                <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
+                    <p><strong>
+                         
+                            本文出自 连嘉阳的技术博客
+                        </strong>
+                        <br>
+                        <strong>本文链接：</strong><a href="http://tech.unicornlien.top/2016/07/16/JNI/五、JNI提供的函数介绍（一）：类和对象操作/">http://tech.unicornlien.top/2016/07/16/JNI/五、JNI提供的函数介绍（一）：类和对象操作/</a>
+                    </p>
+                </blockquote>
+        
+    
+
+    
 </div>
 
 
-<script type="text/ls-javascript" id="page-tagcloud-script">
-    var adjustFooter = function() {
-        if( ($('#bottom').offset().top + $('#bottom').outerHeight() ) < $(window).height() ) {
-            var footerBottom = $(window).height() - $('#bottom').outerHeight() - $('#bottom').offset().top;
-            $('#bottom').css('bottom', '-' + footerBottom + 'px');
-        }
-    };
+                
 
-    $(document).ready(function() {
-        adjustFooter();
-    });
-</script>
+                <!-- Post Comments -->
+                
+                    
+                
+            </div>
 
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2016/07/17/JNI/五、JNI提供的函数介绍（二）：字符串操作/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
 
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2016/07/16/JNI/三、JNI基本使用/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
 
 
 
@@ -523,6 +773,14 @@ It will not impact the appearance and can give developers a lot of support :)
 </aside>
 
                     
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
                     
 
