@@ -239,7 +239,7 @@
 
     
         <meta property="article:published_time" content="Fri Jul 15 2016 16:23:11 GMT+0800">
-        <meta property="article:modified_time" content="Sat Jun 16 2018 17:29:46 GMT+0800">
+        <meta property="article:modified_time" content="Sat Jun 16 2018 17:34:35 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -262,7 +262,7 @@
     "mainEntityOfPage": "http://tech.unicornlien.top/2016/07/15/JNI/二、JNI开发环境搭建与调试/index.html",
     "headline": "二、JNI开发环境搭建与调试",
     "datePublished": "Fri Jul 15 2016 16:23:11 GMT+0800",
-    "dateModified": "Sat Jun 16 2018 17:29:46 GMT+0800",
+    "dateModified": "Sat Jun 16 2018 17:34:35 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "连嘉阳",
@@ -339,6 +339,15 @@
 
     <!-- Left aligned menu below button -->
     
+    
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#1-开发-编译环境的选择"><span class="post-toc-number">1.</span> <span class="post-toc-text">1. 开发/编译环境的选择</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#2-JNI代码调试"><span class="post-toc-number">2.</span> <span class="post-toc-text">2. JNI代码调试</span></a></li></ol>
+    </ul>
     
 
 
@@ -487,8 +496,7 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>#1. 开发/编译环境的选择</p>
-<p>​        JNI技术在Java开发和Android开发中都有涉及，但是Android中的Java是google根据Android自身特性进行改造的，JNI编译环境与标准Java有所不同，Android中使用NDK进行JNI编译，而本文只介绍标准Java的JNI编译环境搭建与调试。</p>
+        <h1 id="1-开发-编译环境的选择"><a href="#1-开发-编译环境的选择" class="headerlink" title="1. 开发/编译环境的选择"></a>1. 开发/编译环境的选择</h1><p>​        JNI技术在Java开发和Android开发中都有涉及，但是Android中的Java是google根据Android自身特性进行改造的，JNI编译环境与标准Java有所不同，Android中使用NDK进行JNI编译，而本文只介绍标准Java的JNI编译环境搭建与调试。</p>
 <p>​        JNI实际上是一段遵循Java本地调用接口的C或C++程序，所以JNI的编译也是用C/C++编译器。最终Java调用C/C++实际上是Java调用动态库实现的，windows下是dll，linux是so。</p>
 <p>如果在Linux下，我们可以使用gcc完成JNI的编译。</p>
 <p>如果在windows下，我们可以有以下几种选择：</p>
@@ -497,8 +505,7 @@
 <li>eclipse安装CDT同时开发Java和C/C++（安装CDT的eclipse开发C/C++比较鸡肋）</li>
 </ol>
 <p>​    </p>
-<p>#2. JNI代码调试</p>
-<p>​        在此只介绍在eclipse开发Java+VS开发JNI的环境下调试JNI代码</p>
+<h1 id="2-JNI代码调试"><a href="#2-JNI代码调试" class="headerlink" title="2. JNI代码调试"></a>2. JNI代码调试</h1><p>​        在此只介绍在eclipse开发Java+VS开发JNI的环境下调试JNI代码</p>
 <p>本文假设你已经有一个使用了JNI的Java工程，并且导入了eclipse且JNI代码也已经导入VS</p>
 <ol>
 <li>在Java工程中将即将调用JNI的代码进行断点，以调试模式启动Java工程</li>
