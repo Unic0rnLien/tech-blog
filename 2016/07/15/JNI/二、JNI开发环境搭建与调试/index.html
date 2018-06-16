@@ -239,7 +239,7 @@
 
     
         <meta property="article:published_time" content="Fri Jul 15 2016 16:23:11 GMT+0800">
-        <meta property="article:modified_time" content="Sat Jun 16 2018 16:07:54 GMT+0800">
+        <meta property="article:modified_time" content="Sat Jun 16 2018 16:45:24 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -262,7 +262,7 @@
     "mainEntityOfPage": "http://tech.unicornlien.top/2016/07/15/JNI/二、JNI开发环境搭建与调试/index.html",
     "headline": "二、JNI开发环境搭建与调试",
     "datePublished": "Fri Jul 15 2016 16:23:11 GMT+0800",
-    "dateModified": "Sat Jun 16 2018 16:07:54 GMT+0800",
+    "dateModified": "Sat Jun 16 2018 16:45:24 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "连嘉阳",
@@ -487,7 +487,7 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <p>#1.开发/编译环境的选择</p>
+        <p>#1. 开发/编译环境的选择</p>
 <p>​        JNI技术在Java开发和Android开发中都有涉及，但是Android中的Java是google根据Android自身特性进行改造的，JNI编译环境与标准Java有所不同，Android中使用NDK进行JNI编译，而本文只介绍标准Java的JNI编译环境搭建与调试。</p>
 <p>​        JNI实际上是一段遵循Java本地调用接口的C或C++程序，所以JNI的编译也是用C/C++编译器。最终Java调用C/C++实际上是Java调用动态库实现的，windows下是dll，linux是so。</p>
 <p>如果在Linux下，我们可以使用gcc完成JNI的编译。</p>
@@ -497,7 +497,7 @@
 <li>eclipse安装CDT同时开发Java和C/C++（安装CDT的eclipse开发C/C++比较鸡肋）</li>
 </ol>
 <p>​    </p>
-<p>#2.JNI代码调试</p>
+<p>#2. JNI代码调试</p>
 <p>​        在此只介绍在eclipse开发Java+VS开发JNI的环境下调试JNI代码</p>
 <p>本文假设你已经有一个使用了JNI的Java工程，并且导入了eclipse且JNI代码也已经导入VS</p>
 <ol>
@@ -505,10 +505,10 @@
 <li>在cmd中使用jps命令查看该Java工程进程的ID</li>
 <li>在VS中对需要调试的JNI代码进行断点</li>
 <li><p>在VS中打开菜单 调试-&gt;附加到进程 会打开附加窗口，根据进程ID找到Java进程，并点击附加</p>
-<p><img src="./二、JNI开发环境搭建与调试/images/1.png" alt="1"></p>
+<p><img src="./2/images/1.png" alt="1"></p>
 </li>
 </ol>
-<p><img src="./二、JNI开发环境搭建与调试/images/2.png" alt="2"></p>
+<p><img src="./2/images/2.png" alt="2"></p>
 <ol start="5">
 <li>附加进程后，在eclipse中按F8继续运行，当程序执行到对应的JNI代码VS将会断点，你就可以在VS中继续调试JNI代码</li>
 </ol>
