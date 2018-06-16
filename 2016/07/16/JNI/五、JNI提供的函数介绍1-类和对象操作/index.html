@@ -239,7 +239,7 @@
 
     
         <meta property="article:published_time" content="Sat Jul 16 2016 15:22:21 GMT+0800">
-        <meta property="article:modified_time" content="Sat Jun 16 2018 17:22:30 GMT+0800">
+        <meta property="article:modified_time" content="Sat Jun 16 2018 17:30:25 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -262,7 +262,7 @@
     "mainEntityOfPage": "http://tech.unicornlien.top/2016/07/16/JNI/五、JNI提供的函数介绍1-类和对象操作/index.html",
     "headline": "五、JNI提供的函数介绍（一）：类和对象操作",
     "datePublished": "Sat Jul 16 2016 15:22:21 GMT+0800",
-    "dateModified": "Sat Jun 16 2018 17:22:30 GMT+0800",
+    "dateModified": "Sat Jun 16 2018 17:30:25 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "连嘉阳",
@@ -518,18 +518,18 @@
 <p>说明：</p>
 <p>​    1. Set<type>Field函数中<type>是根据属性数据类型变化的，例如数据类型为int，那么函数就是SetIntField函数</type></type></p>
 <p>​    具体如下图：</p>
-<p> <img src="/2016/07/16/JNI/五、JNI提供的函数介绍1-类和对象操作/./五、JNI提供的函数介绍1-类和对象操作/1.png" alt="img"><img src="/2016/07/16/JNI/五、JNI提供的函数介绍1-类和对象操作/./五、JNI提供的函数介绍1-类和对象操作/2.png" alt="img"></p>
+<p> <img src="/2016/07/16/JNI/五、JNI提供的函数介绍1-类和对象操作/1.png" alt="img"><img src="/2016/07/16/JNI/五、JNI提供的函数介绍1-类和对象操作/2.png" alt="img"></p>
 <p>​        八种基本数据类型都有对应的方法，其他引用类型统一使用SetObjectFiled函数，看上面第二图，有set当然也有get啦</p>
 <p>​    如果是静态属性的话，jni也是提供好了：</p>
-<p><img src="/2016/07/16/JNI/五、JNI提供的函数介绍1-类和对象操作/./五、JNI提供的函数介绍1-类和对象操作/3.png" alt="img"></p>
+<p><img src="/2016/07/16/JNI/五、JNI提供的函数介绍1-类和对象操作/3.png" alt="img"></p>
 <p>​    2. Call<type>Method函数中<type>是根据返回值变化的，例如返回值为int，则函数为CallIntMethod</type></type></p>
 <p>​    具体如下图：</p>
-<p><img src="/2016/07/16/JNI/五、JNI提供的函数介绍1-类和对象操作/./五、JNI提供的函数介绍1-类和对象操作/4.png" alt="img"><img src="/2016/07/16/JNI/五、JNI提供的函数介绍1-类和对象操作/./五、JNI提供的函数介绍1-类和对象操作/5.png" alt="img"></p>
+<p><img src="/2016/07/16/JNI/五、JNI提供的函数介绍1-类和对象操作/4.png" alt="img"><img src="/2016/07/16/JNI/五、JNI提供的函数介绍1-类和对象操作/5.png" alt="img"></p>
 <p>​    如上两图，每个方法都有附属两个版本——带V版和带A版，这个不是重点，先忽略他们。</p>
 <p>​    可以发现<type>的取值就是八种基本数据类型、Object和void</type></p>
 <p>​    而V版和A版与什么都不带的版本区别仅仅在于最后一个方法参数（Java参数列表）的数据类型不同</p>
 <p>​    JNI也定义了静态方法的调用函数：</p>
-<p><img src="/2016/07/16/JNI/五、JNI提供的函数介绍1-类和对象操作/./五、JNI提供的函数介绍1-类和对象操作/6.png" alt="img"><img src="/2016/07/16/JNI/五、JNI提供的函数介绍1-类和对象操作/./五、JNI提供的函数介绍1-类和对象操作/7.png" alt="img"></p>
+<p><img src="/2016/07/16/JNI/五、JNI提供的函数介绍1-类和对象操作/6.png" alt="img"><img src="/2016/07/16/JNI/五、JNI提供的函数介绍1-类和对象操作/7.png" alt="img"></p>
 <p>​    形式与非静态方法相似</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CallNonvirtalShortMethod(jobject obj, jclazz clazz, jmethodID methodID, ...);</span><br></pre></td></tr></table></figure>
 <p>在实际开发中（时刻App服务端JNI），将结构体一 一赋值到到Java对象返回到Java层出现了一些莫名其妙的问题，后来改成将结构体序列化为json返回到Java层，</p>
