@@ -239,7 +239,7 @@
 
     
         <meta property="article:published_time" content="Sat Jul 16 2016 13:21:28 GMT+0800">
-        <meta property="article:modified_time" content="Sat Jun 16 2018 16:54:30 GMT+0800">
+        <meta property="article:modified_time" content="Sat Jun 16 2018 17:22:09 GMT+0800">
     
 
     <!-- The Twitter Card protocol -->
@@ -262,7 +262,7 @@
     "mainEntityOfPage": "http://tech.unicornlien.top/2016/07/16/JNI/三、JNI基本使用/index.html",
     "headline": "三、JNI基本使用",
     "datePublished": "Sat Jul 16 2016 13:21:28 GMT+0800",
-    "dateModified": "Sat Jun 16 2018 16:54:30 GMT+0800",
+    "dateModified": "Sat Jun 16 2018 17:22:09 GMT+0800",
     "author": {
         "@type": "Person",
         "name": "连嘉阳",
@@ -496,7 +496,7 @@
                 <!-- Post Content -->
                 <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
     
-        <h1 id="1-定义Java本地方法"><a href="#1-定义Java本地方法" class="headerlink" title="1. 定义Java本地方法"></a>1. 定义Java本地方法</h1><p>​        在类中声明一个方法，不需要实现，将方法加上native关键字表示此方法为本地方法<img src="/2016/07/16/JNI/三、JNI基本使用/./三、JNI基本使用/images/1.png" alt="img"></p>
+        <h1 id="1-定义Java本地方法"><a href="#1-定义Java本地方法" class="headerlink" title="1. 定义Java本地方法"></a>1. 定义Java本地方法</h1><p>​        在类中声明一个方法，不需要实现，将方法加上native关键字表示此方法为本地方法<img src="/2016/07/16/JNI/三、JNI基本使用/./三、JNI基本使用/1.png" alt="img"></p>
 <p>#2. 根据类生成头文件</p>
 <p>​        可以使用两种方式，根据个人情况选择（最后都是调用javah）：</p>
 <p>​           </p>
@@ -512,9 +512,9 @@
 </ol>
 <p>​                使用javah命令生成头文件过于繁琐，如果使用eclipse开发java，可以在eclipse中配置javah命令，一键生成头文件。</p>
 <p>​        配置如下，eclipse打开菜单 run-&gt;External Tools-&gt;External Tool Configurations…</p>
-<p><img src="/2016/07/16/JNI/三、JNI基本使用/./三、JNI基本使用/images/2.png" alt="img"></p>
+<p><img src="/2016/07/16/JNI/三、JNI基本使用/./三、JNI基本使用/2.png" alt="img"></p>
 <p>打开了配置窗口后，在左边Program右键菜单点击菜单项new，配置如下：</p>
-<p><img src="/2016/07/16/JNI/三、JNI基本使用/./三、JNI基本使用/images/3.png" alt="img"></p>
+<p><img src="/2016/07/16/JNI/三、JNI基本使用/./三、JNI基本使用/3.png" alt="img"></p>
 <p>Location为javah的位置，javah位置在jdk的bin里</p>
 <p>Working Dicectory为照填${project_loc}/src</p>
 <p>Arguments由于我是maven工程所以填</p>
@@ -522,7 +522,7 @@
 <p>如果是普通java工程，要查看这个工程编译后是生成class在哪里（maven是在/target/classes）,然后这个目录替换掉/target/classes</p>
 <p>接下来，如何使用？</p>
 <p>在Project Explorer中选中你要生成头文件的类，点击如图的javah，即可生成头文件在此工程的jni文件夹，如果没有请右键刷新此工程</p>
-<p><img src="/2016/07/16/JNI/三、JNI基本使用/./三、JNI基本使用/images/4.png" alt="img"><img src="/2016/07/16/JNI/三、JNI基本使用/./三、JNI基本使用/images/5.png" alt="img"></p>
+<p><img src="/2016/07/16/JNI/三、JNI基本使用/./三、JNI基本使用/4.png" alt="img"><img src="/2016/07/16/JNI/三、JNI基本使用/./三、JNI基本使用/5.png" alt="img"></p>
 <p>#3. 根据头文件编写C代码实现</p>
 <p>​    </p>
 <ol>
@@ -530,7 +530,7 @@
 </ol>
 <p>​        生成的头文件里包含了函数声明，根据这些函数声明编写对应的C代码实现就能实现Java调用C的效果。</p>
 <p>你可以把这个头文件导入你的VS C语言工程，开始进行JNI的开发。</p>
-<p><img src="/2016/07/16/JNI/三、JNI基本使用/./三、JNI基本使用/images/6.png" alt="img"></p>
+<p><img src="/2016/07/16/JNI/三、JNI基本使用/./三、JNI基本使用/6.png" alt="img"></p>
 <p>如上图，头文件全部都是函数声明，但是与普通的C语言函数声明不太一样，因为它是遵守JNI的规范来声明的。</p>
 <p>例如函数声明：</p>
 <p>​    JNIEXPORT jboolean JNICALL Java_qrsoft_sk818sdk_SK818SDKAPI_destroy(JNIEnv *, jobject);</p>
@@ -551,7 +551,7 @@
 <li>include jni.h头文件(在jdk下的include文件夹)</li>
 <li>着手开发！</li>
 </ul>
-<p><img src="/2016/07/16/JNI/三、JNI基本使用/./三、JNI基本使用/images/7.png" alt="img"></p>
+<p><img src="/2016/07/16/JNI/三、JNI基本使用/./三、JNI基本使用/7.png" alt="img"></p>
 
         
                 <blockquote style="margin: 2em 0 0;padding: 0.5em 1em;border-left: 3px solid #F44336;background-color: #F5F5F5;list-style: none;">
